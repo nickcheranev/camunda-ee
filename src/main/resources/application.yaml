@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./camunda-h2-database
+  application:
+    name: camunda
+
+camunda.bpm.admin-user:
+  id: demo
+  password: demo
+
+q-bpm:
+  topics:
+    task-action-event: ${QBPM_TASK_ACTION_EVENT:taskActionEventTopic}
+    task-create-event: ${QBPM_TASK_CREATE_EVENT:taskCreateEventTopic}
+    task-cancel-event: ${QBPM_TASK_CANCEL_EVENT:taskCancelEventTopic}
+    process-deploy-event: ${QBPM_PROCESS_DEPLOY_EVENT:dsOnAfterBusinessProcessVersionPublic}
+    process-deploy-publish-event: ${QBPM_PROCESS_DEPLOY_PUBLISH_EVENT:dsOnAfterBusinessProcessVersionSave}
+    process-monitor-event: ${QBPM_PROCESS_MONITOR_EVENT:dsOnBPMPlayerProcessMonitor}
+    process-definition-event: ${QBPM_PROCESS_DEFINITION_EVENT:dsOnAfterProcessDefinitionCreate}
+    process-activity-event: ${QBPM_PROCESS_ACTIVITY_EVENT:dsOnProcessActivityEvent}
+    process-instance-event: ${QBPM_PROCESS_INSTANCE_EVENT:dsOnProcessInstanceEvent}
+    #    process-input-topics: ${QBPM_PROCESS_INPUT_TOPICS:${KAFKA_INPUT_TOPICS:}}
+    process-input-topics: from-message-hub;qnwprc-news-parsed;qnwprc-news-store-approve;qnwprc-category-store-approve;qnwprc-recipient-store-approve
+    process-output-topics: qnwprc-news-source;qnwprc-news-command;qnwprc-category-store;qnwprc-recipient-store
+  rest-connector:
+    connection-timeout: ${QBPM_REST_CONNECTOR_TIMEOUT:30000}
+    connection-request-timeout: ${QBPM_REST_CONNECTOR_REQUEST_TIMEOUT:30000}
+    socket-timeout: ${QBPM_REST_CONNECTOR_SOCKET_TIMEOUT:30000}
+
+server:
+  servlet:
+    context-path: /camunda
+
+logging:
+  level:
+    com.example.workflow: debug

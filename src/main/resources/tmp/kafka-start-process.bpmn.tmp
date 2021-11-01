@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1mi5o9b" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.10.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+  <bpmn:process id="Process_1kfgyaa" name="Process start by Kafka" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Kafka Start">
+      <bpmn:outgoing>Flow_1ey6qfm</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_18q3fdu" messageRef="Message_1vofq6c" />
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1ey6qfm" sourceRef="StartEvent_1" targetRef="Activity_11yyc9f" />
+    <bpmn:serviceTask id="Activity_11yyc9f" name="Debug" camunda:delegateExpression="${debugAdapter}">
+      <bpmn:incoming>Flow_1ey6qfm</bpmn:incoming>
+      <bpmn:outgoing>Flow_0llmkc4</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_0o2cuzw">
+      <bpmn:incoming>Flow_0llmkc4</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0llmkc4" sourceRef="Activity_11yyc9f" targetRef="Event_0o2cuzw" />
+  </bpmn:process>
+  <bpmn:message id="Message_1vofq6c" name="kafka-start" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1kfgyaa">
+      <bpmndi:BPMNEdge id="Flow_1ey6qfm_di" bpmnElement="Flow_1ey6qfm">
+        <di:waypoint x="215" y="97" />
+        <di:waypoint x="280" y="97" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0llmkc4_di" bpmnElement="Flow_0llmkc4">
+        <di:waypoint x="380" y="97" />
+        <di:waypoint x="452" y="97" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_19espz6_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="79" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="170" y="122" width="56" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0tjldp7_di" bpmnElement="Activity_11yyc9f">
+        <dc:Bounds x="280" y="57" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0o2cuzw_di" bpmnElement="Event_0o2cuzw">
+        <dc:Bounds x="452" y="79" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

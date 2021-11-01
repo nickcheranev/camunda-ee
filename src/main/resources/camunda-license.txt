@@ -1,0 +1,19 @@
+--------------- BEGIN CAMUNDA LICENSE KEY ---------------
+TmquxlUvZSuywSa32ZGHwPfKwCSwNOLU4XP/W8AWqVYqaNkJ0C1/SSw2h
+M9kqiFolhW6qscHhiM1Y8ScSk7jeTl41Kj9rH84euvIDU9FFmZfeVE1fQ
+9wiY9LHtpWRY2Oxy5DMUg2JVpdxt5HzwAvT34wn5yacctVWjMVeFB4VeE
+xgtOCS3BNDOWbUzctkaIyjGA3qYWHDP68RydS0MvOf7EyG+Rn+PHG20pJ
+Kl5Uqx9sovSZsQGxPKarTFuFPrxn4eDBbS+eDbpH1G698qvDig0PnWNh+
+Th/ODBLlJF8LE8EIup+lHuju4YD7QTQ/yUliT5dg2itGtDM0n7fKy4v0s
+3wiGsZsYkzm+qaj8lSgBlCJNQaJrvUoQxhP1Qkjc0yuYm9SYgupd/jgyX
+4YEGvj8m4EB28UjGPQxf/PKVv5klOAYVLpZJcjZmnXK2wdkVc8J+kWA/9
+OZ6NDiNVbulmLhOk3hmUKzgrmth97+nO+yLhFf8sU4ZXxE+Vm3L7gyKpQ
+57thF6ByonRZYA/XP3AmN3f3Asp+L4HNp5sLtRk27TTCANJrLHkc41stt
+ukAkUaBXGv2ERIm59K+Clwf+CuEakI4P+bL/QIutxUwgbvHrLx+KMMzUX
+k5EgrObCEOvxx/RGpPR2MDQqJueb7V7FK+GCUxXvh+dTPm2er7Dujwao=;
+customer = diasoft;
+expiryDate = 2021-11-30;
+cawemo = true;
+optimize = true;
+camundaBPM = true;
+---------------  END CAMUNDA LICENSE KEY  ---------------
