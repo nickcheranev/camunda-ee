@@ -20,7 +20,7 @@ q-bpm:
     process-activity-event: ${QBPM_PROCESS_ACTIVITY_EVENT:dsOnProcessActivityEvent}
     process-instance-event: ${QBPM_PROCESS_INSTANCE_EVENT:dsOnProcessInstanceEvent}
     #    process-input-topics: ${QBPM_PROCESS_INPUT_TOPICS:${KAFKA_INPUT_TOPICS:}}
-    process-input-topics: from-message-hub;qnwprc-news-parsed;qnwprc-news-store-approve;qnwprc-category-store-approve;qnwprc-recipient-store-approve
+    process-input-topics: from-message-hub;qnwprc-news-parsed;qnwprc-news-store-approve;qnwprc-category-store-approve-1;qnwprc-category-store-approve-2;qnwprc-recipient-store-approve
     process-output-topics: qnwprc-news-source;qnwprc-news-command;qnwprc-category-store;qnwprc-recipient-store
   rest-connector:
     connection-timeout: ${QBPM_REST_CONNECTOR_TIMEOUT:30000}

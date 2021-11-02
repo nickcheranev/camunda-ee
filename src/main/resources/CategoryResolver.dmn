@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1qr0ug5" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.10.0">
+  <decision id="Decision_0dscv5p" name="Определитель категории">
+    <decisionTable id="DecisionTable_00ucxci">
+      <input id="Input_1" label="News Category" biodi:width="489">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>newsCategory</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_192q3fr">
+          <text></text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="Assigned Category" name="assignedCategory" typeRef="string" biodi:width="285" />
+      <rule id="DecisionRule_0gjkajk">
+        <inputEntry id="UnaryTests_0qlxgby">
+          <text>"ТРУД И ЗАНЯТОСТЬ"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11le3r6">
+          <text>"ТРУД И ЗАНЯТОСТЬ"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1y9xgev">
+        <inputEntry id="UnaryTests_1f9e5fj">
+          <text>"СОЦИАЛЬНОЕ ОБЕСПЕЧЕНИЕ. ПОСОБИЯ И ЛЬГОТЫ"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1yhuled">
+          <text>"СОЦИАЛЬНОЕ ОБЕСПЕЧЕНИЕ"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_0dscv5p">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
